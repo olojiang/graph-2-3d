@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L 形别墅 — 3D 交互模型</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="canvas"></canvas>
+      <div id="ui-overlay">
+        <div id="toolbar">
+          <button class="btn active" data-mode="whitebox">白模</button>
+          <button class="btn" data-mode="textured">贴图</button>
+          <button class="btn" data-mode="explode">爆炸视图</button>
+        </div>
+        <div id="fps-counter">-- FPS</div>
+        <div id="light-control">
+          <label for="light-slider">光线</label>
+          <input id="light-slider" type="range" min="0" max="100" value="55" />
+        </div>
+        <div id="info-panel" class="hidden">
+          <button id="close-panel">×</button>
+          <h3 id="panel-title"></h3>
+          <p id="panel-area"></p>
+          <p id="panel-desc"></p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
